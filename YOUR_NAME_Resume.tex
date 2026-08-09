@@ -1,0 +1,43 @@
+%-------------------------
+% Resume in Latex
+% Author: Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% W = WaterlooWorks, E = External, O = External with Waterloo email
+\newcommand{\version}{E}
+
+\input{sections/preamble.tex}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Heading section
+\input{sections/header.tex}
+
+
+
+% Conditional section order
+\ifthenelse{\boolean{educationBelow}}{
+    % Skills & Experience first
+    \input{sections/skills.tex}
+    \input{sections/experience.tex}
+    \input{sections/projects.tex}
+    \input{sections/leadership.tex}
+    % \input{sections/certificates.tex}
+    \input{sections/education.tex}
+}{
+    % Education first (standard student format)
+    \input{sections/education.tex}
+    \input{sections/skills.tex}
+    \input{sections/experience.tex}
+    \input{sections/projects.tex}
+    \input{sections/leadership.tex}
+    % \input{sections/certificates.tex}
+}
+
+\end{document}

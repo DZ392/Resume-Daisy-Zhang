@@ -1,0 +1,46 @@
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+
+# LaTeX temporary files
+*.dvi
+*.ps
+*.cb
+*.cb2
+.*.lb
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build directories
+_minted*/
+.texpadtmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Optional: Uncomment if you don't want the PDF in Git
+# *.pdf

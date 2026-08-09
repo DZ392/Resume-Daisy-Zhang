@@ -1,0 +1,118 @@
+%----------FORMATTING----------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ifthen}
+\usepackage{amsmath}
+\input{glyphtounicode}
+
+%----------FONT----------
+\usepackage[default]{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+
+%----------PAGE SETUP----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%----------MARGINS----------
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
+
+%----------FORMATTING OPTIONS----------
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+
+%----------SECTION FORMATTING (STANDARDIZED)----------
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+%----------CUSTOM COMMANDS----------
+% Individual bullet point
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1\vspace{-2pt}}}
+}
+
+% Skills entry (2 parameters: category, skills list)
+\newcommand{\resumeSkillsHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1:} \small{#2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% Education entry (4 parameters: school, dates, degree, location)
+\newcommand{\resumeEducationHeading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% Experience/job entry (4 parameters: title, dates, subtitle, location)
+\newcommand{\resumeExperienceHeading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% Project entry (3 parameters: title, tech stack, dates)
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} $|$ \textit{\small#2} & #3 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% Certificate entry (3 parameters: title, issuer, date)
+\newcommand{\resumeCertificateHeading}[3]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} $|$ \textit{\small#2} & #3 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+
+% List containers
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Bullet point style
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%----------VERSION CONTROL----------
+% Email based on version
+\ifthenelse{\equal{\version}{E}}{
+  \newcommand{\myemail}{d432zhan@uwaterloo.ca}
+}{
+  \newcommand{\myemail}{d432zhan@uwaterloo.ca}
+}
+
+% Education placement based on version
+\newboolean{educationBelow}
+\ifthenelse{\equal{\version}{W}}{
+  \setboolean{educationBelow}{true}
+}{
+  \setboolean{educationBelow}{false}
+}
