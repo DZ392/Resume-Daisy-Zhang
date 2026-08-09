@@ -1,0 +1,279 @@
+%-------------------------
+% Resume in Latex
+% Author: Daisy Zhang
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+%----------FORMATTING----------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ifthen}
+\usepackage{amsmath}
+\input{glyphtounicode}
+
+%----------FONT----------
+\usepackage[default]{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+
+%----------PAGE SETUP----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%----------MARGINS----------
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
+
+%----------FORMATTING OPTIONS----------
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+
+%----------SECTION FORMATTING (STANDARDIZED)----------
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+%----------CUSTOM COMMANDS----------
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1\vspace{-2pt}}}
+}
+
+\newcommand{\resumeSkillsHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1:} \small{#2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeEducationHeading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeExperienceHeading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} $|$ \textit{\small#2} & #3 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% List containers
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Bullet point style
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Daisy Zhang} \\ \vspace{2pt}
+    \small 
+    \href{mailto:d432zhan@uwaterloo.ca}{\underline{d432zhan@uwaterloo.ca}} $|$ 
+    \href{https://portfolio-dz.my.canva.site/}{\underline{portfolio-dz.my.canva.site}} $|$ 
+    \href{https://linkedin.com/in/daisyzhang}{\underline{linkedin.com/in/daisyzhang}} $|$
+    \href{https://github.com/galaxydaz}{\underline{github.com/galaxydaz}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubHeadingListStart
+        \resumeEducationHeading
+            {University of Waterloo}
+            {Expected: Apr. 2030}
+            {Candidate for Bachelor of Applied Science in Mechatronics Engineering \textnormal{| cGPA: 4.0/4.0}}
+            {Waterloo, ON}
+            \resumeItemListStart
+                \resumeItem{\textbf{Relevant Coursework:} Design and Ethics, Digital Computation / Data Structures, Circuits, Linear Algebra, Statics}
+                \resumeItem{\textbf{Awards \& Honors:} Governor General's Academic Medal (Highest academic standing in graduating class of 200+), President's Scholarship of Distinction, Marjorie Barber Scholarship (Awarded to an outstanding female student in Engineering)}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+    \resumeSubHeadingListStart
+        \resumeSkillsHeading
+            {Programming Languages}
+            {C++, Java, Python, SQL, HTML/CSS, VBA}
+        \resumeSkillsHeading
+            {CAD \& Hardware Design}
+            {SolidWorks, AutoCAD, OnShape, GD\&T, KiCad (PCB Design), 3D Printing, Laser Cutting, Soldering}
+        \resumeSkillsHeading
+            {Frameworks \& Developer Tools}
+            {React, Supabase, AWS, Vercel, Pygame, TensorFlow, Git/GitHub, JIRA, Confluence, Agile/Scrum}
+    \resumeSubHeadingListEnd
+    \vspace{-4pt}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+    \resumeSubHeadingListStart
+        \resumeExperienceHeading
+            {Statsyuk Analytics}
+            {Feb. 2026 -- Apr. 2026}
+            {Analytics \& Computer Vision Intern}
+            {Waterloo, ON}
+        \resumeItemListStart
+            \resumeItem{Collaborated with computer vision engineers to analyze hockey game footage using real-time object tracking algorithms.}
+            \resumeItem{Designed interactive data overlays to translate complex athletic metrics into actionable visual telemetry for players and coaches.}
+            \resumeItem{Developed digital engagement strategy and media templates to showcase product capabilities and increase user adoption.}
+        \resumeItemListEnd
+    %-----------------------------------
+        \resumeExperienceHeading
+            {WatBotics Design Team \& Biotron}
+            {Sept. 2025 -- Present}
+            {Mechanical Design Engineer}
+            {Waterloo, ON}
+        \resumeItemListStart
+            \resumeItem{Designed CAD models in SolidWorks and fabricated 3D-printed functional prototypes for smart glasses with embedded electronics.}
+            \resumeItem{Collaborated with the electronics sub-team to integrate electromechanical assemblies using servo motors and PWM controllers.}
+            \resumeItem{Designed PCBs in KiCad within strict spatial and mechanical constraints, integrating software logic with hardware limitations.}
+            \resumeItem{Validated mechanical models against electrical specifications to ensure seamless system integration and standards compliance.}
+        \resumeItemListEnd
+    %-----------------------------------
+        \resumeExperienceHeading
+            {Grassroots KW}
+            {Sept. 2025 -- Present}
+            {Web Developer}
+            {Waterloo, ON}
+        \resumeItemListStart
+            \resumeItem{Built web platform features on development team using React, Supabase, and AWS/Vercel to showcase local sustainability initiatives.}
+            \resumeItem{Expanded environmental advocacy across Waterloo community by organizing regional initiatives such as the Youth Climate Summit.}
+            \resumeItem{Participated in community campaigns to promote data-driven sustainability practices and actionable environmental policies.}
+        \resumeItemListEnd
+    %-----------------------------------
+        \resumeExperienceHeading
+            {Virtek Vision International}
+            {May 2025 -- Aug. 2025}
+            {System Quality Assurance Intern}
+            {Waterloo, ON}
+        \resumeItemListStart
+            \resumeItem{Authored technical documentation in Confluence and standardized defect reporting workflows in JIRA, translating complex hardware-software integration bottlenecks into actionable developer requirements.}
+            \resumeItem{Facilitated cross-functional decisions during agile retrospectives and sprint planning, coaching team members on custom Python automation scripts to scale QA processes.}
+            \resumeItem{Executed 200+ test cases, investigating edge-case anomalies and verifying bug fixes in active collaboration with the developer team.}
+        \resumeItemListEnd
+    %-----------------------------------
+        \resumeExperienceHeading
+            {Pumpernickel Now}
+            {July 2024 -- Aug. 2024}
+            {Information Technology \& Marketing Co-op}
+            {Waterloo, ON}
+        \resumeItemListStart
+            \resumeItem{Designed and programmed prototype website landing page with optimized hero imagery using HTML \& CSS, bridging media and software sub-teams.}
+            \resumeItem{Collaborated within a team of 4 to manage marketing research data for 4+ concurrent projects, presenting weekly analytical updates to clients and supervisors.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {Bin to Bite}
+            {React, Vercel, TensorFlow, LLMs, Git}
+            {May 2025 -- Present}
+        \resumeItemListStart
+            \resumeItem{Created a full-stack web application during a hackathon that generates custom recipes from photos of leftover ingredients to reduce food waste.}
+            \resumeItem{Tested and integrated ML pipelines from TensorFlow to LLMs, boosting image recognition accuracy to 95\% for real-world edge cases.}
+            \resumeItem{Engineered an interactive ingredient safety checklist, alongside client-side image compression and local caching to optimize API performance.}
+            \resumeItem{Managed codebase lifecycle using Git and GitHub for team version control and deployed continuous builds on Vercel.}
+        \resumeItemListEnd
+    %-----------------------------------    
+        \resumeProjectHeading
+            {Autonomous Checkers Sorter Robot}
+            {C++, SolidWorks, OnShape, Sensors, Control Loops}
+            {Dec. 2025}
+        \resumeItemListStart
+            \resumeItem{Engineered a mobile robot with an articulated arm and custom claw in SolidWorks/OnShape to pick up and sort checkers pieces into two bins by colour.}
+            \resumeItem{Programmed real-time closed-loop control algorithms in C++ using inertial sensor feedback to dynamically correct motor drift.}
+            \resumeItem{Developed pre-release verification sensor logic, achieving 100\% piece counting and sorting accuracy with zero false positives.}
+            \resumeItem{Led 4-member multidisciplinary engineering team, coordinating workstreams, CAD modeling, and sprint milestones.}
+        \resumeItemListEnd
+    %-----------------------------------    
+        \resumeProjectHeading
+            {FIRST Robotics Competition (FRC)}
+            {C++, Mechanical Fabrication, Subsystems, CAD}
+            {Sept. 2023 -- June 2025}
+        \resumeItemListStart
+            \resumeItem{Designed, built, and programmed competition robots, qualifying for and competing at the FRC World Championship in 2024.}
+            \resumeItem{Programmed real-time robot subsystems in C++ and engineered robust mechanical hang and bumper mechanisms using engineering design principles.}
+            \resumeItem{Troubleshot electromechanical challenges under strict competition time constraints, iterating on mechanical leverage to elevate robot.}
+        \resumeItemListEnd
+    %-----------------------------------    
+        \resumeProjectHeading
+            {Object-Oriented Pygame Platformer}
+            {Python, Pygame, OOP}
+            {May 2024}
+        \resumeItemListStart
+            \resumeItem{Developed a 2D physics platformer implementing OOP design patterns and class inheritance for game entities and state management.}
+            \resumeItem{Programmed real-time coordinate geometry collision detection and gravity simulation with responsive player controls.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------LEADERSHIP & COMMUNITY-----------
+\section{Leadership \& Community}
+    \resumeSubHeadingListStart
+        \resumeExperienceHeading
+            {Women in Engineering (WiE), TECH+ UW}
+            {Sept. 2025 -- Present}
+            {Mentorship Director}
+            {Waterloo, ON}
+        \resumeItemListStart
+            \resumeItem{Spearhead mentorship initiatives and organize inclusive networking events to support underrepresented minorities in STEM fields.}
+            \resumeItem{Facilitate community outreach and engagement activities to promote career development and mentorship for women in engineering.}
+        \resumeItemListEnd
+    %-----------------------------------
+        \resumeExperienceHeading
+            {TRCA Girls Can Too \& Youth Council}
+            {Sept. 2022 -- Present}
+            {Engineering \& Construction Mentor}
+            {Brampton, ON}
+        \resumeItemListStart
+            \resumeItem{Designed and built park benches for Heart Lake Conservation Park using SketchUp and laser cutters, translating CAD models to physical prototypes.}
+            \resumeItem{Constructed 2 bunkies and 6 disc golf structures at Albion Hills utilizing power tools and timber framing techniques.}
+            \resumeItem{Completed 35+ hours of hands-on fabrication and mentored 10 younger students in mechanical fabrication skills and tool safety.}
+        \resumeItemListEnd
+    %-----------------------------------
+        \resumeExperienceHeading
+            {Eco (Environmental) Club}
+            {Sept. 2023 -- June 2025}
+            {Co-President}
+            {Ontario, Canada}
+        \resumeItemListStart
+            \resumeItem{Spearheaded planning and execution of sustainability initiatives, leading a team of 5 delivering 15+ major events annually to achieve EcoSchools Platinum status.}
+            \resumeItem{Implemented waste and energy audits, analyzing metrics to boost school-wide waste-free lunch participation from 62\% to over 90\%.}
+            \resumeItem{Organized community cleanups with 152 volunteers, gathered 15+ bags of waste, and coordinated marketing campaigns engaging 300+ attendees and 350+ pledges.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
