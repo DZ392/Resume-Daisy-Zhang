@@ -1,167 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author: Daisy Zhang
-% License: MIT
-%------------------------
-
-\documentclass[letterpaper,11pt]{article}
-
-% W = WaterlooWorks, E = External, O = External with Waterloo email
-\newcommand{\version}{E}
-
-%----------FORMATTING----------
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{ifthen}
-\usepackage{amsmath}
-\input{glyphtounicode}
-
-%----------FONT----------
-\usepackage[default]{sourcesanspro}
-\renewcommand{\familydefault}{\sfdefault}
-
-%----------PAGE SETUP----------
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-%----------MARGINS----------
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
-\setlength{\footskip}{4.08003pt}
-
-%----------FORMATTING OPTIONS----------
-\urlstyle{same}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-\pdfgentounicode=1
-
-%----------SECTION FORMATTING (STANDARDIZED)----------
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
-
-%----------CUSTOM COMMANDS----------
-% Individual bullet point
-\newcommand{\resumeItem}[1]{
-  \item\small{{#1\vspace{-2pt}}}
-}
-
-% Skills entry (2 parameters: category, skills list)
-\newcommand{\resumeSkillsHeading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1:} \small{#2} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-% Education entry (4 parameters: school, dates, degree, location)
-\newcommand{\resumeEducationHeading}[4]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small#4} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-% Experience/job entry (4 parameters: title, dates, subtitle, location)
-\newcommand{\resumeExperienceHeading}[4]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small#4} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-% Project entry (3 parameters: title, tech stack, dates)
-\newcommand{\resumeProjectHeading}[3]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} $|$ \textit{\small#2} & #3 \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-% Certificate entry (3 parameters: title, issuer, date)
-\newcommand{\resumeCertificateHeading}[3]{
-  \item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} $|$ \textit{\small#2} & #3 \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-
-% List containers
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-% Bullet point style
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-%----------VERSION CONTROL----------
-% Email based on version
-\ifthenelse{\equal{\version}{E}}{
-  \newcommand{\myemail}{d432zhan@uwaterloo.ca}
-}{
-  \newcommand{\myemail}{d432zhan@uwaterloo.ca}
-}
-
-% Education placement based on version
-\newboolean{educationBelow}
-\ifthenelse{\equal{\version}{W}}{
-  \setboolean{educationBelow}{true}
-}{
-  \setboolean{educationBelow}{false}
-}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
-
-% Heading section
-\begin{center}
-    \textbf{\Huge \scshape Daisy Zhang} \\ \vspace{2pt}
-    \small 
-    \href{mailto:\myemail}{\underline{\myemail}} $|$ 
-    \href{https://portfolio-dz.my.canva.site/}{\underline{portfolio-dz.my.canva.site}} $|$ 
-    \href{https://linkedin.com/in/daisy-y-zhang}{\underline{linkedin.com/in/daisy-y-zhang}} $|$
-    \href{https://github.com/DZ392}{\underline{github.com/DZ392}}
-\end{center}
-
-% Education (usually unchanged)
-
-% Skills (usually unchanged)
-%-----------PROGRAMMING SKILLS-----------
-\section{Skills and Certifications}
-    \resumeSubHeadingListStart
-        \resumeItem{Adaptable, reliable, detail-oriented, and a fast learner with communication and time management skills.}
-        \resumeSkillsHeading
-            {Programming Languages}
-            {\textbf{C++}, \textbf{Java}, \textbf{Python}, \textbf{HTML/CSS}, \textbf{SQL}, \textbf{VBA}}
-        \resumeSkillsHeading
-            {CAD \& Hardware Tools}
-            {\textbf{SolidWorks}, \textbf{AutoCAD}, \textbf{OnShape}, \textbf{GD\&T}, \textbf{KiCad}, \textbf{SketchUp}, \textbf{3D Printing}, \textbf{Laser Cutters}, \textbf{Power Tools}}
-        \resumeSkillsHeading
-            {Frameworks \& Developer Tools}
-            {\textbf{React Hook}, \textbf{Supabase}, \textbf{AWS Vercel}, \textbf{TensorFlow}, \textbf{LLMs}, \textbf{Pygame}, \textbf{Git/GitHub}, \textbf{JIRA}, \textbf{Confluence}}
-    \resumeSubHeadingListEnd
-    \vspace{-4pt}
-
-% Combined Experience, Projects, and Leadership
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
@@ -269,20 +105,10 @@
     \resumeSubHeadingListEnd
 %-----------AWARDS-----------
 \section{Awards \& Recognition}
-    
-esumeSubHeadingListStart
-        
-esumeItem{	extbf{Governor General's Academic Medal} — highest academic average in graduating class of 200+}
-        
-esumeItem{	extbf{Jean Lumb Scholarship} — Innovation in Technology for sustainability and prototyping work}
-        
-esumeItem{	extbf{Subject-Specific Awards} — highest achievement in Physics, Advanced Functions, and Chemistry}
-        
-esumeItem{	extbf{GSA School Life Involvement \& Award} — sustained leadership in school-wide inclusion initiatives}
-        
-esumeItem{	extbf{School Honor Roll} — all 4 years of high school}
-    
-esumeSubHeadingListEnd
-
-
-\end{document}
+    esumeSubHeadingListStart
+        esumeItem{	extbf{Governor General's Academic Medal} — highest academic average in graduating class of 200+}
+        esumeItem{	extbf{Jean Lumb Scholarship} — Innovation in Technology for sustainability and prototyping work}
+        esumeItem{	extbf{Subject-Specific Awards} — highest achievement in Physics, Advanced Functions, and Chemistry}
+        esumeItem{	extbf{GSA School Life Involvement \& Award} — sustained leadership in school-wide inclusion initiatives}
+        esumeItem{	extbf{School Honor Roll} — all 4 years of high school}
+    esumeSubHeadingListEnd
