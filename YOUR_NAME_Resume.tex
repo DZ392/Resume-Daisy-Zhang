@@ -21,13 +21,13 @@
 
 % Conditional section order
 \ifthenelse{\boolean{educationBelow}}{
-    % Skills & Experience first
     \input{sections/skills.tex}
     \input{sections/all_experience.tex}
+    \input{sections/awards.tex}
 }{
-    % Education first (standard student format)
     \input{sections/skills.tex}
     \input{sections/all_experience.tex}
+    \input{sections/awards.tex}
 }
 
 \end{document}
