@@ -10,7 +10,10 @@
 \usepackage{tabularx}
 \usepackage{ifthen}
 \usepackage{amsmath}
-\input{glyphtounicode}
+\usepackage{iftex}
+\ifpdftex
+  \input{glyphtounicode}
+\fi
 
 %----------FONT----------
 \usepackage[default]{sourcesanspro}
@@ -36,7 +39,9 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-\pdfgentounicode=1
+\ifpdftex
+  \pdfgentounicode=1
+\fi
 
 %----------SECTION FORMATTING (STANDARDIZED)----------
 \titleformat{\section}{

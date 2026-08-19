@@ -21,7 +21,10 @@
 \usepackage{tabularx}
 \usepackage{ifthen}
 \usepackage{amsmath}
-\input{glyphtounicode}
+\usepackage{iftex}
+\ifpdftex
+  \input{glyphtounicode}
+\fi
 
 %----------FONT----------
 \usepackage[default]{sourcesanspro}
@@ -47,7 +50,9 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-\pdfgentounicode=1
+\ifpdftex
+  \pdfgentounicode=1
+\fi
 
 %----------SECTION FORMATTING (STANDARDIZED)----------
 \titleformat{\section}{
@@ -258,17 +263,5 @@
             \resumeItem{Led a team of 5 executing \textbf{15+ major events} annually, increasing waste-free participation from \textbf{62\% to 90\%+} and achieving \textbf{Platinum EcoSchools} certification (\textbf{300+ attendees}); organize inclusive \textbf{STEM mentorship} events supporting underrepresented minorities in engineering.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
-
-% Awards
-%-----------AWARDS-----------
-\section{Awards \& Recognition}
-    \resumeSubHeadingListStart
-        \resumeItem{\textbf{Governor General's Academic Medal} — highest academic average in graduating class of 200+}
-        \resumeItem{\textbf{Jean Lumb Scholarship} — Innovation in Technology for sustainability and prototyping work}
-        \resumeItem{\textbf{Subject-Specific Awards} — highest achievement in Physics, Advanced Functions, and Chemistry}
-        \resumeItem{\textbf{GSA School Life Involvement \& Award} — sustained leadership in school-wide inclusion initiatives}
-        \resumeItem{\textbf{School Honor Roll} — all 4 years of high school}
-    \resumeSubHeadingListEnd
-
 
 \end{document}
